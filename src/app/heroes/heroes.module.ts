@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { HeroComponent } from './pages/hero/hero.component';
 import { SearchComponent } from './pages/search/search.component';
+import { ConfirmMessageComponent } from './components/confirm-message/confirm-message.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SearchComponent } from './pages/search/search.component';
     ImagenPipe,
     HeroComponent,
     SearchComponent,
+    ConfirmMessageComponent,
   ],
   imports: [CommonModule, HeroesRoutingModule, MaterialModule, FormsModule],
 })

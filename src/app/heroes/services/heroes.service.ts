@@ -23,4 +23,13 @@ export class HeroesService {
       `${this.baseUrl}/heroes?q=${termino}&_limit=6`
     );
   }
+  addHero(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(`${this.baseUrl}/heroes`, hero);
+  }
+  setHero(hero: Hero): Observable<Hero> {
+    return this.http.put<Hero>(`${this.baseUrl}/heroes/${hero.id}`, hero);
+  }
+  deleteHero(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/heroes/${id}`);
+  }
 }
