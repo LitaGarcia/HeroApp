@@ -49,7 +49,7 @@
   <div fxLayout>
     <button mat-raised-button color="primary" (click)="saveNewHero()">
       <mat-icon>edit</mat-icon>
-      Guardar
+      {{ hero.id ? "Actualizar" : "Crear" }}
     </button>
 
     <button
