@@ -11,8 +11,14 @@ export class LoginComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
   loginWithUser() {
-    // this.router.navigate(['./heroes']);
-    this.authService.loginWithUser().subscribe((resp) => console.log(resp));
+    this.authService.loginWithUser().subscribe((resp) => {
+      if (resp.id) {
+        this.router.navigate(['./heroes']);
+      }
+    });
   }
-  loginWithoutUser() {}
+
+  loginWithoutUser() {
+    this.router.navigate(['/heroes']);
+  }
 }
